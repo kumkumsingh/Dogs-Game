@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DoglistContainer from './Components/DoglistContainer'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          
-        </p>
+        <h1>Hi,Dog Lovers</h1>
+        <h2>Welcome to DogGame App</h2>
+        <DoglistContainer/>
       </header>
     </div>
   );
