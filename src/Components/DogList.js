@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
-import DogListContainer from 'DoglistContainer'
 
 export default class DogList extends Component {
-    
-
-    render() {
+    renderDogBreed(breed) {
+        return <li key={breed}>{breed}</li>
+      }
+      render() {
+        const { dogBreeds } = this.props
         return (
-            <div className="dogs-list">
-                <h1>Dogs List</h1>
-                {/* if state dogbreeds is null, display 'Loading' */}
-                {this.props.dogs === null && 'Loading...'}
-            </div>
+          <div className="dogs-list">
+            <h1>Dogs List</h1>
+            { !dogBreeds && 'Loading...' }
+            {
+              dogBreeds &&
+              <ul>{ dogBreeds.map(this.renderDogBreed) }</ul>
+            }
+          </div>
         )
+      }
     }
-}
