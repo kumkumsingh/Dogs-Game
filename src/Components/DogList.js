@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class DogList extends Component {
     renderDogBreed(breed) {
-        return <li key={breed}>{breed}</li>
+
+        return( <li key={breed}><Link to={`/dog-breeds/${breed}`}>{breed}</Link></li>)
       }
       render() {
         //console.log(this.props);
