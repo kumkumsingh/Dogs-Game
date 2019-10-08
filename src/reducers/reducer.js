@@ -1,17 +1,13 @@
-import React from './node_modules/react'
 
-const reducer = (state = [], action = {}) => {
+const reducer = (state =  [], action = {}) => {
+  // first we checked to see what the action.payload actually was with console.log, then we decided to only return this because this is the initial start. When we for example add something, then we have to return ...state.
     switch (action.type) {
-    case 'SET_DOGS_LIST':
-    // first we checked to see what the action.payload actually was, then we decided to only return this because this is the initial start. When we for example add something, then we have to return ...state.
-        // console.log(action.payload);
-      return action.payload
+      case 'SET_DOGS_LIST':
+        return action.payload
 
-    default:
-      return state
+      default:
+        return state
     }
-    
-  }
-  
-  export default reducer
-  
+}
+
+export default reducer
