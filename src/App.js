@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import DoglistContainer from './components/DoglistContainer'
+import DoglistContainer from './Components/DoglistContainer'
 
 
 function App() {
