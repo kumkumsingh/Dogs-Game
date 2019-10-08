@@ -10,5 +10,3 @@ export function getDogList() {
         })
     }
   }
-
-  // do we need to use getState as a parameter? 
