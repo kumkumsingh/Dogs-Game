@@ -5,14 +5,20 @@ export default class DogList extends Component {
         return <li key={breed}>{breed}</li>
       }
       render() {
+          // console.log(this.props);
+          
         const { dogBreeds } = this.props
+        console.log('what is dogbreed', dogBreeds);
+        
         return (
           <div className="dogs-list">
-            <h1>Dogs List</h1>
+            <h2>Dogs List </h2>
             { !dogBreeds && 'Loading...' }
             {
               dogBreeds &&
-              <ul>{ dogBreeds.map(this.renderDogBreed) }</ul>
+              <ul>
+              { dogBreeds.map((breed)=> this.renderDogBreed(breed)) }
+              </ul>
             }
           </div>
         )

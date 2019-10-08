@@ -1,19 +1,27 @@
-import * as request from 'superagent'
 import React, { Component } from 'react'
 import DogList from './DogList'
-import {getDogList} from './Actions/Dog'
+import {getDogList} from '../Actions/Dog'
 import {connect} from 'react-redux'
 
 class DoglistContainer extends Component {
-  state = { dogBreeds: null }
+  // state = { dogBreeds: null }
+  componentDidMount() {
+    this.props.getDogList()
+  }
 
   render() {
-    return <DogList dogBreeds={this.props.getDogList()} />
+    // console.log('rendering from container', this.state.dogs);
+    
+    return (
+    <DogList dogBreeds={this.props.dogs} />    
+    )
   }
-  
 }
 
+const mapStateToProps = (state) => {
+  return {
+    dogs: state
+  }
+}
 
-
-
-export default connect(null,{getDogList})(DoglistContainer)
+export default connect(mapStateToProps, { getDogList })(DoglistContainer)
