@@ -1,4 +1,4 @@
-import React from 'react'
+import React from './node_modules/react'
 
 const reducer = (state = [], action = {}) => {
     switch (action.type) {

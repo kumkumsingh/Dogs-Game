@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import DoglistContainer from './components/DoglistContainer'
+import DoglistContainer from './Components/DoglistContainer'
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hi,Dog Lovers</h1>
-        <h2>Welcome to DogGame App</h2>
+        <h1>Hi, dog lovers</h1>
+        <h2>Welcome to this Dog game App</h2>
         <DoglistContainer/>
       </header>
     </div>
