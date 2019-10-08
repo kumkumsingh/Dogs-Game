@@ -5,10 +5,10 @@ export default class DogList extends Component {
         return <li key={breed}>{breed}</li>
       }
       render() {
-          // console.log(this.props);
+        //console.log(this.props);
           
         const { dogBreeds } = this.props
-        console.log('what is dogbreed', dogBreeds);
+        //console.log('what is dogbreed', dogBreeds);
         
         return (
           <div className="dogs-list">
