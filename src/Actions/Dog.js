@@ -7,7 +7,8 @@ export function getDogList() {
           dispatch({
             type : 'SET_DOGS_LIST',  
             payload : Object.keys(response.body.message)})
-           
         })
     }
   }
+
+  // do we need to use getState as a parameter? 
