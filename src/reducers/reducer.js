@@ -1,3 +1,4 @@
+
 const reducer = (state = [], action = {}) => {
     switch (action.type) {
     case 'SET_DOGS_LIST':
