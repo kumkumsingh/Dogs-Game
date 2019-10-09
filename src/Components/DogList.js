@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import DogImageContainer from './DogImageContainer';
 
 export default class DogList extends Component {
     renderDogBreed(breed) {
-        return <li key={breed}>{breed}</li>
+
+        return( <li key={breed}><Link to={`/dog-breeds/${breed}`}>{breed}</Link></li>)
+      }
+      renderDogBreedImage(breed) {
+
+        return  <DogImageContainer breed = {breed} /> 
       }
       render() {
-          // console.log(this.props);
+        //console.log(this.props);
           
         const { dogBreeds } = this.props
-        console.log('what is dogbreed', dogBreeds);
+        //console.log('what is dogbreed', dogBreeds);
         
         return (
           <div className="dogs-list">
@@ -20,6 +27,7 @@ export default class DogList extends Component {
               { dogBreeds.map((breed)=> this.renderDogBreed(breed)) }
               </ul>
             }
+            
           </div>
         )
       }
