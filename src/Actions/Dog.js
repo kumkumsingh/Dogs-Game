@@ -10,3 +10,15 @@ export function getDogList() {
         })
     }
   }
+
+  export function getDogRandomImage() {
+      return function (dispatch) {
+          request('https://dog.ceo/api/breed/hound/images/random')
+          .then (response => {
+              dispatch ({
+                 type : 'GET_DOG_IMAGE',
+                 payload : response.body.message
+              })
+          })
+      }
+  }
