@@ -1,23 +1,27 @@
 import React, { Component } from 'react'
 import {getDogRandomImage} from '../Actions/Dog'
+import {connect} from 'react-redux'
+import DogImage from './DogImage'
 
-export default class DogImageContainer extends Component {
+ class DogImageContainer extends Component {
     componentDidMount(){
-
-        this.props.getDogRandomImage
+        console.log(this.props)
+        const breed = this.props.match.params.breed
+        this.props.getDogRandomImage(breed)
+        console.log('dogbreedimage',breed)
     }
    
     render() {
-        console.log('dogbreedimage',this.props.getDogRandomImage)
+        
         return (
             <div>
-                
+               <DogImage Images= {this.props.Images}/> 
             </div>
         )
     }
 }
- const mapStateToProps = (state) => {
+ const mapStateToProps = (state) => ({
 
-    DogImage:state
- }
- export default connect ({getDogRandomImage,mapStateToProps})(DogImageContainer)
+    Images:state
+ })
+ export default connect (mapStateToProps,{getDogRandomImage})(DogImageContainer)
