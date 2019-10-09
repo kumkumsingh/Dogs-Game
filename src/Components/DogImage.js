@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {getDogRandomImage} from '../Actions/Dog'
 
- class DogBreedImages extends Component {
+ class DogImage extends Component {
     componentDidMount(){
 
         this.props.getDogRandomImage()
@@ -28,4 +28,4 @@ const mapStateToProps = (state) => {
     dogImage : state
     }
 }
-export default connect(mapStateToProps, { getDogRandomImage })(DogBreedImages)
+export default connect(mapStateToProps, { getDogRandomImage })(DogImage)
