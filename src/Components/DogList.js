@@ -5,7 +5,7 @@ import DogImageContainer from './DogImageContainer';
 export default class DogList extends Component {
     renderDogBreed(breed) {
 
-        return( <li key={breed}><Link to={`/dog-breeds/${breed}`}>{breed}</Link></li>)
+        return( <li className="dogs-list" key={breed}><Link to={`/dog-breeds/${breed}`}>{breed}</Link></li>)
       }
       renderDogBreedImage(breed) {
 
