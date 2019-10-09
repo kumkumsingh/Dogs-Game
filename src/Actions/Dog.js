@@ -7,7 +7,20 @@ export function getDogList() {
           dispatch({
             type : 'SET_DOGS_LIST',  
             payload : Object.keys(response.body.message)})
-           
         })
     }
+  }
+
+  export function getDogRandomImage(breed) {
+      return function (dispatch) {
+          request(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images/random/10`)
+          .then (response => {
+              console.log("response body from images :",response.body.message)
+              dispatch ({
+                 type : 'GET_DOG_IMAGE',
+                 payload : response.body.message
+                
+              })
+          })
+      }
   }
