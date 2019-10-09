@@ -11,7 +11,7 @@ export function getDogList() {
     }
   }
 
-  export function getDogRandomImage() {
+  export function getDogRandomImage(breed) {
       return function (dispatch) {
           request(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images/random`)
           .then (response => {
