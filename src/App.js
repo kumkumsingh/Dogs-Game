@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import DoglistContainer from './Components/DoglistContainer'
 import { Route } from 'react-router-dom'
-import DogImage from './Components/DogImageContainer'
+import DogImage from './Components/DogImage'
+import DogImageContainer from './Components/DogImageContainer';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <h1>Hi, dog lovers</h1>
        <h2>Welcome to this Dog game App</h2>
        <Route exact path="/" component={DoglistContainer} />
-       <Route path="/dog-breeds/:breed" component={DogImage} />
+       <Route path="/dog-breeds/:breed" component={DogImageContainer} />
       </header>
      
     </div>

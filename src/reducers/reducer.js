@@ -6,9 +6,8 @@ const reducer = (state = [], action = {}) => {
     return [...action.payload]
 
     case "GET_DOG_IMAGE":
-      console.log('hi');
-      
-      return [...action.payload];
+    
+    return action.payload;
 
     default:
       return state;

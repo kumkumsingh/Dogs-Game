@@ -4,7 +4,7 @@ import React, { Component } from 'react'
  export default class DogImage extends Component {
 
     render() {
-        const {dogImagesUrl} = this.props
+       // const {dogImagesUrl} = this.props.Images
         //console.log('checking the image',this.props)
      return (
       <div className="dog-breed-images">
@@ -14,7 +14,7 @@ import React, { Component } from 'react'
       {/* {dogImagesUrl.map = (url) =>{
        <img src = {url} alt="Dog"/>
       }} */}
-
+     <img src={this.props.Images}></img>
       <Link to="/">Go back to the index</Link>
     </div>
         )

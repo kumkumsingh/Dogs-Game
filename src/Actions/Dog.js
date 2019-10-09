@@ -13,11 +13,14 @@ export function getDogList() {
 
   export function getDogRandomImage(breed) {
       return function (dispatch) {
-          request(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images/random`)
+          //request(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images/random/`)
+          request(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images/random/`)
           .then (response => {
+              console.log("response body from images :",response.body.message)
               dispatch ({
                  type : 'GET_DOG_IMAGE',
                  payload : response.body.message
+                
               })
           })
       }

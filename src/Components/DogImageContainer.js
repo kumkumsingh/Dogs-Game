@@ -12,7 +12,7 @@ import DogImage from './DogImage'
     }
    
     render() {
-        
+        console.log('this.props.images',this.props.Images)
         return (
             <div>
                <DogImage Images= {this.props.Images}/> 
