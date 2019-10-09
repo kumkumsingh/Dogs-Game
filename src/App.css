@@ -1,3 +1,9 @@
+body {
+  background-color: rgba(236, 234, 234, 0.99);
+  border: 5px solid;
+  padding: 20px;
+}
+
 .App {
   text-align: center;
 }
@@ -7,8 +13,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 50vh;
+  background-color: #e49234;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +23,34 @@
   color: white;
 }
 
+/* only accessing the images inside the class 'dog-breed-images' */
+.dog-breed-images img {
+  width: 40%;
+  padding: 20px;
+}
+
+.dogs-list {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none; 
+  /* the text decoration doesnt work yet!! */
+}
+
 .App-link {
   color: #09d3ac;
+}
+
+.button {
+  background-color:  #e49234;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.intro {
+  font-size: 20px;
+  padding: 20px;
 }
