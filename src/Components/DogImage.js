@@ -6,7 +6,7 @@ import React, { Component } from 'react'
     render() {
     return (
       <div className="dog-breed-images">
-      <h3 className="dog-images">Images of </h3>
+      <h3 className="dog-images">Images of the breed</h3>
 
       Memorise how the breed looks like!
       <br></br>
