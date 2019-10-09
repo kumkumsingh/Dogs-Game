@@ -3,13 +3,10 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {getDogRandomImage} from '../Actions/Dog'
 
- class DogBreedImages extends Component {
-    componentDidMount(){
+ export default class DogImage extends Component {
 
-        this.props.getDogRandomImage()
-    }
     render() {
-        console.log('checking the image',this.props)
+        //console.log('checking the image',this.props)
      return (
       <div className="dog-breed-images">
       <h1>Dogs Breed Images</h1>
@@ -22,10 +19,3 @@ import {getDogRandomImage} from '../Actions/Dog'
         )
     }
 }
-const mapStateToProps = (state) => {
-
-    return{
-    dogImage : state
-    }
-}
-export default connect(mapStateToProps, { getDogRandomImage })(DogBreedImages)

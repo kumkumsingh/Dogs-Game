@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+
 
 const reducer = (state = [], action = {}) => {
     switch (action.type) {
@@ -8,8 +8,8 @@ const reducer = (state = [], action = {}) => {
       return [...action.payload]
     case 'GET_DOG_RANDOMIMAGE':
 
-    return [action.payload]
-    
+    return [...action.payload]
+
     default:
       return state
     }
