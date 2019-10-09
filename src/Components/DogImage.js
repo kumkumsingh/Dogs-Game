@@ -4,17 +4,17 @@ import React, { Component } from 'react'
  export default class DogImage extends Component {
 
     render() {
-       // const {dogImagesUrl} = this.props.Images
-        //console.log('checking the image',this.props)
-     return (
+    return (
       <div className="dog-breed-images">
       <h1>Dogs Breed Images</h1>
 
       This page will show image of a random dog breed.
-      {/* {dogImagesUrl.map = (url) =>{
-       <img src = {url} alt="Dog"/>
-      }} */}
-     <img src={this.props.Images}></img>
+      {/* { this.props.Images && this.props.Images.map(url => <img src={ url } alt="Dog" />) }
+      { !this.props.Images && 'Loading...' } */}
+      {this.props.Images.map(url =>
+       <img src = {url} alt="Dog"/>)}
+      
+     {/* <img src={this.props.Images}></img> */}
       <Link to="/">Go back to the index</Link>
     </div>
         )
