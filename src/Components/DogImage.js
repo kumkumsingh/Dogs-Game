@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
-import {getDogRandomImage} from '../Actions/Dog'
 
  export default class DogImage extends Component {
 
