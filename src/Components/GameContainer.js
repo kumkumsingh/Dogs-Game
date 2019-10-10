@@ -9,7 +9,7 @@ class Game1 extends Component {
     state = {
         answered: null,
         score: 0,
-        percentage: 0
+       
     }
 
     componentDidMount() {
@@ -34,6 +34,7 @@ class Game1 extends Component {
 
             setTimeout(() => {
                 this.props.getDogRandomImageGame1();
+                this.setState({answered:null})
             }, 4000)
         }
         else {
@@ -46,6 +47,7 @@ class Game1 extends Component {
 
             setTimeout(() => {
                 this.props.getDogRandomImageGame1();
+                this.setState({answered:null})
             }, 4000)
         }
 
@@ -69,7 +71,7 @@ class Game1 extends Component {
                 <Link to="/">Go back to the index</Link>
                 <h2>Choose from</h2>
                 <p>Score:{this.state.score}</p>
-                <p>percentage:{this.state.percentage}</p>
+    
                 <img src={this.props.Game1Image.dogImageGame1} alt="Game1" style={{ maxWidth: '80%' }}></img>
                 {this.state.answered === null ? <></> : <p>{this.state.answered}</p>
 
