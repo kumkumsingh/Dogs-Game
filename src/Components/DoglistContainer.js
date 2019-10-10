@@ -9,7 +9,7 @@ class DoglistContainer extends Component {
     this.props.getDogList()
   }
   render() {
-    // console.log('rendering from container', this.state.dogs);
+    console.log('rendering from container', this.props.dogs);
     return (
     <DogList dogBreeds={this.props.dogs} />    
     )
@@ -17,7 +17,7 @@ class DoglistContainer extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    dogs: state
+    dogs: state.list
   }
 }
 

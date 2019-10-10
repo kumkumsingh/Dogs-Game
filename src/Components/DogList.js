@@ -11,12 +11,13 @@ export default class DogList extends Component {
     );
   }
   renderDogBreedImage(breed) {
+    console.log(breed)
     return <DogImageContainer breed={breed} />;
   }
   render() {
     //console.log(this.props);
     const { dogBreeds } = this.props;
-    //console.log('what is dogbreed', dogBreeds);
+    console.log('what is dogbreed', dogBreeds);
     return (
       <div className="dogs-list">
         <h2>Dogs List </h2>

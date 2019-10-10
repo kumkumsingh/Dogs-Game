@@ -6,7 +6,8 @@ export function getDogList() {
         .then(response => {
           dispatch({
             type : 'SET_DOGS_LIST',  
-            payload : Object.keys(response.body.message)})
+            payload : Object.keys(response.body.message)
+          })
         })
     }
   }

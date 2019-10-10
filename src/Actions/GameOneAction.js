@@ -1,12 +1,14 @@
-import * as request from 'superagent'
+import * as request from 'superagent';
 
-export const startGame = () => {
+export function renderGameImage() {
     return function (dispatch) {
-      request('https://dog.ceo/api/breeds/list/all')
+      request('https://dog.ceo/api/breeds/image/random')      
         .then(response => {
+          console.log('action?');
           dispatch({
-            type : 'SET_DOGS_LIST',  
-            payload : Object.keys(response.body.message)})
+            type : 'GAMEONE_IMAGE',  
+            payload : response.body.message
         })
-    }
+    }) 
   }
+}

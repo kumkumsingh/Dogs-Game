@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-// import reducer from './reducer
+import dogs from './dogs'
+import gameOne from './gameOneReducer'
 
 export default combineReducers({
-    
+    dogs,
+    gameOne
   })

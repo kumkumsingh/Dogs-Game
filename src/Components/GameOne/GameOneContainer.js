@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {getDogRandomImage} from '../../Actions/Dog'
+import GameOne from './GameOne';
 
 
 class GameOneContainer extends Component {
 
-    
-    componentDidMount() {
-        console.log(this.props);
-    }
-    
     render() {
+        console.log('what is props?', this.props);
+        
         return (
             <div> 
-              <h1>Testing...</h1>
+              <GameOne />
            </div>
         );
     }
@@ -21,7 +19,7 @@ class GameOneContainer extends Component {
 
 const mapStateToProps = (state) => ({
 
-    gamingImage:state
+    gamingImage: state
  })
 
 export default connect (mapStateToProps, {getDogRandomImage }) (GameOneContainer);
