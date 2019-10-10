@@ -5,7 +5,8 @@ export default props => {
   if(!props.images.length > 0){
     return null
   }
-  
+  // when the state is not loaded / when its empty, return null so that the program doesn't try to map over an empty array.
+
   return (
     <div className="dog-breed-images">
       <h3 className="dog-images">Images of the breed</h3>
