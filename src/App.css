@@ -25,7 +25,7 @@ body {
 
 /* only accessing the images inside the class 'dog-breed-images' */
 .dog-breed-images img {
-  width: 40%;
+  width: 35%;
   padding: 20px;
 }
 

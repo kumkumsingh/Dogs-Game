@@ -5,10 +5,10 @@ import DogImage from './DogImage'
 
  class DogImageContainer extends Component {
     componentDidMount(){
-        console.log(this.props)
+        // console.log(this.props)
         const breed = this.props.match.params.breed
         this.props.getDogRandomImage(breed)
-        console.log('dogbreedimage',breed)
+        // console.log('dogbreedimage',breed)
     }
    
     render() {

@@ -3,6 +3,7 @@ import "./App.css";
 import DoglistContainer from "./Components/DoglistContainer";
 import { Route } from "react-router-dom";
 import DogImageContainer from "./Components/DogImageContainer";
+import GameOneContainer from './Components/GameOne/GameOneContainer'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <ul>
             The first game shows you a random picture of a dog and it must ask
             the user to choose the correct breed name from a list of 3 options.
-            The second game works the same, only you get to see 3 breednames and
+            The second game works the same, only you get to see 1 breedname and
             you can choose from 3 images.
           </ul>
         </div>
@@ -31,6 +32,7 @@ function App() {
       </main>
       <Route exact path="/" component={DoglistContainer} />
       <Route path="/dog-breeds/:breed" component={DogImageContainer} />
+      <Route path="/gameone" component={GameOneContainer} />
     </div>
   );
 }
