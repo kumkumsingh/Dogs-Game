@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import DogList from './DogList'
 import {getDogList} from '../Actions/Dog'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class DoglistContainer extends Component {
   // state = { dogBreeds: null }
@@ -11,13 +12,17 @@ class DoglistContainer extends Component {
   render() {
     // console.log('rendering from container', this.state.dogs);
     return (
-    <DogList dogBreeds={this.props.dogs} />    
+    <div>
+    <DogList dogBreeds={this.props.dogs.dogList} />   
+    <Link to="/Game1">Game1</Link>
+    </div>
     )
   }
+  
 }
 const mapStateToProps = (state) => {
   return {
-    dogs: state
+    dogs: state.reducer
   }
 }
 
