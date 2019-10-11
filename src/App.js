@@ -6,24 +6,37 @@ import DogImageContainer from './Components/DogImageContainer';
 import GameContainer from './Components/GameContainer'
 import Game2Container from './Components/Game2Container'
 
-
-
 function App() {
   return (
     <div className="App">
-       
       <header className="App-header">
-      
-      <h1>Hi, dog lovers</h1>
-       <h2>Welcome to this Dog game App</h2>
-       <Route exact path="/" component={DoglistContainer} />
+        <h2>The Dog Memory Game</h2>
+      </header>
+      <main>
+        <div className="intro">
+          This is an application showcasing different memory games with dogs.
+          You can first memorise the names of all the dog breeds at this page.
+          Then, you can continue to the games!
+        </div>
+        <div>
+          <ul>
+            The first game shows you a random picture of a dog and it must ask
+            the user to choose the correct breed name from a list of 3 options.
+            The second game works the same, only you get to see 3 breednames and
+            you can choose from 3 images.
+          </ul>
+        </div>
+        <br></br>
+
+        <button className="button">Play 'Memory Game with images'</button>
+        <button className="button">Play 'Memory Game with breednames'</button>
+      </main>
+      <Route exact path="/" component={DoglistContainer} />
        <Route path="/dog-breeds/:breed" component={DogImageContainer} />
        {/* <Route path="./Components/Game1" component={Game1} /> */}
        <Route path="/Game1" component={GameContainer} />
        <Route path="/Game2" component={Game2Container} />
       {/* <Game1/>  */}
-      </header>
-     
     </div>
   );
 }
