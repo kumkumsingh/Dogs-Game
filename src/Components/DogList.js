@@ -6,7 +6,6 @@ export default class DogList extends Component {
 
         return( <li className="dogs-list" key={breed}><Link to={`/dog-breeds/${breed}`}>{breed}</Link></li>)
       }
-  
       render() {
         //console.log(this.props);
           
