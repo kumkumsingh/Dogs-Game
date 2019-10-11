@@ -1,8 +1,10 @@
-import React from "react";
-import "./App.css";
-import DoglistContainer from "./Components/DoglistContainer";
-import { Route } from "react-router-dom";
-import DogImageContainer from "./Components/DogImageContainer";
+import React from 'react';
+import './App.css';
+import DoglistContainer from './Components/DoglistContainer'
+import { Route } from 'react-router-dom'
+import DogImageContainer from './Components/DogImageContainer';
+import GameContainer from './Components/GameContainer'
+import Game2Container from './Components/Game2Container'
 
 function App() {
   return (
@@ -30,7 +32,11 @@ function App() {
         <button className="button">Play 'Memory Game with breednames'</button>
       </main>
       <Route exact path="/" component={DoglistContainer} />
-      <Route path="/dog-breeds/:breed" component={DogImageContainer} />
+       <Route path="/dog-breeds/:breed" component={DogImageContainer} />
+       {/* <Route path="./Components/Game1" component={Game1} /> */}
+       <Route path="/Game1" component={GameContainer} />
+       <Route path="/Game2" component={Game2Container} />
+      {/* <Game1/>  */}
     </div>
   );
 }
