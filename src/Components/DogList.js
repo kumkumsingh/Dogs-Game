@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import DogImageContainer from './DogImageContainer';
 
 export default class DogList extends Component {
     renderDogBreed(breed) {
 
         return( <li className="dogs-list" key={breed}><Link to={`/dog-breeds/${breed}`}>{breed}</Link></li>)
-      }
-      renderDogBreedImage(breed) {
-
-        return  <DogImageContainer breed = {breed} /> 
       }
       render() {
         //console.log(this.props);
