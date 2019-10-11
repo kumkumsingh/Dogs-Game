@@ -41,7 +41,7 @@ class Game1 extends Component {
 
             this.setState({
                 answered: `Wrong ans wait for 3 seconds and Correct Answer is 
-        ${correcAnswerDogGame1}`,
+            ${correcAnswerDogGame1}`,
                 score: this.state.score
             })
 

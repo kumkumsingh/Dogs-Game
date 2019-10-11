@@ -15,6 +15,7 @@ class DoglistContainer extends Component {
     <div>
     <DogList dogBreeds={this.props.dogs.dogList} />   
     <Link to="/Game1">Game1</Link>
+    <Link to="/Game2">Game2</Link>
     </div>
     )
   }

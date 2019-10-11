@@ -1,6 +1,6 @@
 import * as request from 'superagent'
 
-export function getDogRandomImageGame1(breedName) {
+export function getDogRandomImageGame1() {
     return function (dispatch) {
         request('https://dog.ceo/api/breeds/image/random')
         .then (response => {

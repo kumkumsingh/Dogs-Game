@@ -5,7 +5,7 @@ const initialState = {
 const reducer = (state = initialState ,action = {}) => {
    switch(action.type) {
        case 'GET_DOG_IMAGE_GAME2':
-       return {...state,dogImageGame2:[...action.payload]}
+       return {...state , dogImageGame2:[...action.payload]}
 
        default :
        return state 
@@ -13,3 +13,5 @@ const reducer = (state = initialState ,action = {}) => {
    }
 
 }
+
+export default  reducer
