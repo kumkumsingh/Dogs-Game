@@ -7,15 +7,18 @@ import React, { Component } from 'react'
         console.log('breed name',this.props.breed)
     return (
       <div className="dog-breed-images">
-      <h1>Dogs Breed Images</h1>
-
-      This page will show image of a random dog breed.
+      <h3 className="dog-images">Images of the breed</h3>
+      Memorise how the breed looks like!
+      <br></br>
+      {/* { this.props.Images && this.props.Images.map(url => <img src={ url } alt="Dog" />) }
+      { !this.props.Images && 'Loading...' } */}
       {this.props.Images.map(url =>
        <img src = {url} alt="Dog" />)}
       
      {/* <img src={this.props.Images}></img> */}
-      <Link to="/">Go back to the index</Link>
-      
+     <br></br>
+     <br></br>
+      <Link to="/"> <strong>Go back to the homepage</strong></Link>
     </div>
         )
     }
