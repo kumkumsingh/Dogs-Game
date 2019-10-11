@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {getDogRandomImage} from '../../Actions/Dog'
+import GameOne from './GameOne'
 
-
+//the smart component, it is connected to the reducre/state
 class GameOneContainer extends Component {
 
     componentDidMount() {
