@@ -1,6 +1,6 @@
 const initialState = {
     dogImageGame2 :[],
-    correctImage: null ,
+    correctAnswer: null ,
 }
 const reducer = (state = initialState ,action = {}) => {
    switch(action.type) {
