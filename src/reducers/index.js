@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-// import reducer from './reducer
+import breeds from './breeds'
+import question from './question'
 
 export default combineReducers({
-    
+  breeds,
+  question
   })

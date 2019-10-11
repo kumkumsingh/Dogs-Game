@@ -12,16 +12,16 @@ import DogImage from './DogImage'
     }
    
     render() {
-        console.log('this.props.images',this.props.Images)
+        console.log('this.props.images',this.props.images)
         return (
             <div>
-               <DogImage Images= {this.props.Images}/> 
+               <DogImage images= {this.props.images}/> 
             </div>
         )
     }
 }
  const mapStateToProps = (state) => ({
 
-    Images:state
+    images:state
  })
  export default connect (mapStateToProps,{getDogRandomImage})(DogImageContainer)
