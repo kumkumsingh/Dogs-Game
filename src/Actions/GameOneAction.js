@@ -1,6 +1,6 @@
 import * as request from 'superagent'
 
-export const startGame = () => {
+export const renderGameImage = () => {
     return function (dispatch) {
       request('https://dog.ceo/api/breeds/list/all')
         .then(response => {

@@ -5,7 +5,6 @@ import {getDogRandomImage} from '../../Actions/Dog'
 
 class GameOneContainer extends Component {
 
-    
     componentDidMount() {
         console.log(this.props);
     }
