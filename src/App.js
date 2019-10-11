@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom'
 import DogImageContainer from './Components/DogImageContainer';
 import GameContainer from './Components/GameContainer'
 import Game2Container from './Components/Game2Container'
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
@@ -27,9 +28,7 @@ function App() {
           </ul>
         </div>
         <br></br>
-
-        <button className="button">Play 'Memory Game with images'</button>
-        <button className="button">Play 'Memory Game with breednames'</button>
+        {/* <button className="button">Play 'Memory Game with breednames'</button> */} 
       </main>
       <Route exact path="/" component={DoglistContainer} />
        <Route path="/dog-breeds/:breed" component={DogImageContainer} />

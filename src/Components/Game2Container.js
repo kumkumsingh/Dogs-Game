@@ -14,12 +14,10 @@ class Game2Container extends Component {
 
         this.props.getDogRandomImageGame2()
         this.props.getDogRandomImageGame2CorrectAns()
-        // console.log('checking props value', this.props.Game2Image)
     }
     checkCorrectAnswerGame2 = (event) => {
 
         const breedNameGame2 = event.target.getAttribute('src').split('/')[4].split('-')[0]
-        // console.log('breedNameGame2', breedNameGame2)
         const Game2CorrectAnsCheck = this.props.Game2ImageCorrectAns.Game2correctAnswer
         if (Game2CorrectAnsCheck === breedNameGame2) {
             this.setState({
@@ -52,12 +50,12 @@ class Game2Container extends Component {
         const Game2CorrectAns = this.props.Game2ImageCorrectAns.Game2correctAnswer
         const Game2CorrectAnsImage = this.props.Game2ImageCorrectAns.dogImageGame2CorrectAns
 
-        // console.log('Game2CorrectAns', Game2CorrectAns)
-        // console.log('Game2CorrectAnsImage', Game2CorrectAnsImage)
-
         return (
             <div>
                 <h1>Welcome to Game2</h1>
+                <Link to="/" className="App-link" >Go back to the index</Link>
+                <p>'Name of dog': {Game2CorrectAns}</p> 
+                <p>Click the pic to Match the Name</p>
                 <p>Score:{this.state.scoreGame2}</p>
                 {imageArray
                     .concat(Game2CorrectAnsImage)
@@ -66,9 +64,9 @@ class Game2Container extends Component {
                         <img src={image} alt="No Image available" style={{ maxWidth: '40%' }}
                             onClick={this.checkCorrectAnswerGame2}></img>)}
                 <br></br>
-                <p>{this.state.answeredGame2}</p>
-                <p>{Game2CorrectAns}</p><br></br>
-                <Link to="/">Go back to the index</Link>
+                
+                <p>{this.state.answeredGame2}</p><br></br>
+              
             </div>
 
 

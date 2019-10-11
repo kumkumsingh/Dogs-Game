@@ -13,16 +13,13 @@ class Game1 extends Component {
   componentDidMount() {
     this.props.getDogRandomImageGame1();
     this.props.getDogList();
-    //console.log("breedname",this.props.Game1Image.correctAnswer)
-    //console.log('breed list',this.props.dogBreeds.dogList)
   }
-  checkCorrectAnswer = event => {
+  checkCorrectAnswer = (event) => {
     const value = event.target.innerHTML;
     console.log("value", value);
     const correcAnswerDogGame1 = this.props.Game1Image.correctAnswer;
     console.log(correcAnswerDogGame1);
     if (correcAnswerDogGame1 === value) {
-      //alert('correct ans')
       this.setState({
         answered: "Yipee... correct answer-Next Question",
         score: this.state.score + 1
@@ -46,25 +43,21 @@ class Game1 extends Component {
     }
   };
   render() {
-    //console.log('checking image url', this.props.Game1Image.dogImageGame1)
     const correcAnswerGame1 = this.props.Game1Image.correctAnswer;
     console.log("correcAnswerGame1", correcAnswerGame1);
     const ansArray = this.props.dogBreeds.dogList;
-    //console.log('ansArray', ansArray)
     const randomAnswer1 = ansArray[Math.floor(Math.random() * ansArray.length)];
     const randomAnswer2 = ansArray[Math.floor(Math.random() * ansArray.length)];
-    //console.log('checkingans1', randomAnswer1)
-    //console.log('checkingans2', randomAnswer2)
-    //console.log('correctans', correcAnswerGame1)
     const finalAnswer = [
       correcAnswerGame1,
       randomAnswer1,
       randomAnswer2
     ].sort();
 
-    return (
+    return (    
       <div>
-        <Link to="/">Go back to the index</Link>
+        <Link to="/" className="App-link">Go back to the index</Link>
+        <h1>Welcome to Game1</h1>
         <h2>Choose from</h2>
         <p>Score:{this.state.score}</p>
 
@@ -75,13 +68,13 @@ class Game1 extends Component {
         ></img>
         {this.state.answered === null ? <></> : <p>{this.state.answered}</p>}
         <div>
-          <button id="btn1" onClick={this.checkCorrectAnswer}>
+          <button id="btn1" onClick={this.checkCorrectAnswer} className="button">
             {finalAnswer[0]}
           </button>
-          <button id="btn2" onClick={this.checkCorrectAnswer}>
+          <button id="btn2" onClick={this.checkCorrectAnswer} className="button">
             {finalAnswer[1]}
           </button>
-          <button id="btn3" onClick={this.checkCorrectAnswer}>
+          <button id="btn3" onClick={this.checkCorrectAnswer} className="button">
             {finalAnswer[2]}
           </button>
         </div>
