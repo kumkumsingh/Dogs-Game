@@ -21,10 +21,8 @@ function App() {
         </div>
         <div>
           <ul>
-            The first game shows you a random picture of a dog and it must ask
-            the user to choose the correct breed name from a list of 3 options.
-            The second game works the same, only you get to see 3 breednames and
-            you can choose from 3 images.
+            The first game shows you a random picture of a dog and you choose the correct breed name from a list of 3 options.
+            The second game is very similar. Here you get to see 3 images and have to pair the correct image with the name of the breed that is given. 
           </ul>
         </div>
         <br></br>
