@@ -1,19 +1,12 @@
-const initialState = {
-  dogList: [],
-  dogImage: [],
-  
-}
-
-const reducer = (state = initialState, action = {}) => {
-    switch (action.type) {
-    case 'SET_DOGS_LIST':
-    // first we checked to see what the action.payload actually was with console.log, then we decided to only return this because this is the initial start. When we for example add something, then we have to return ...state.
-        // console.log(action.payload);
-    return {...state, dogList:[...action.payload]}
+const reducer = (state = [], action = {}) => {
+  switch (action.type) {
+    case "SET_DOGS_LIST":
+      // first we checked to see what the action.payload actually was with console.log, then we decided to only return this because this is the initial start. When we for example add something, then we have to return ...state.
+      // console.log(action.payload);
+      return { ...state, dogList: [...action.payload] };
 
     case "GET_DOG_IMAGE":
-    
-    return {...state, dogImage: action.payload};
+      return { ...state, dogImage: action.payload };
 
     default:
       return state;
